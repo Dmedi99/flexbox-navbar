@@ -44,6 +44,23 @@ a:hover{
   align-items:center;
 }
 .toggle{
+  order:1;
+}
+.item.button{
+  order:2;
+}
+.item{
+  width:100%;
+  text-align: center;
+  order:3;
+  display:none;
+}
+.item.active{
+  display:block;
+}
+
+
+.toggle{
  cursor:pointer
 }
 .bars{
@@ -66,4 +83,62 @@ a:hover{
 }
 .bars::after{
   top:-5px;
+}
+
+
+/* Tablet Menu  */
+
+@media all and (min-witdh:468px){
+  .menu{
+    justify-content:center;
+  }
+  .logo{
+    flex:1;
+  }
+  .item.button{
+    width:auto;
+    order:1;
+    display:block
+  }
+  .toggle{
+    order:2;
+  }
+  .button{
+    border:0;
+  }
+  .button a{
+    text-decoration: none;
+    padding:7px 15px;
+    background: teal;
+    border:1px solid #006d6d;
+    border-radius:50cm;
+  }
+  .button a:hover{
+    transition:all .25s;
+  }
+}
+
+@media all and(min-width:768px){
+.item{
+  display:block;
+  width:auto;
+}
+.toggle{
+  display: none;
+}
+.logo{
+  order:0;
+}
+.item{
+  order:1;
+}
+.button{
+  order:2;
+}
+.menu li{
+  padding: 15px 10px;
+}
+.menu li.button{
+  padding-right:0;
+}
 }
